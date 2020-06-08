@@ -1,13 +1,6 @@
 # css-tilt-animation
 
 How?
-  - the key component to this is positioning
-    - relative
-    - absolute
-    - right, top, left, bottom
-    - z-index
-    - :hover
-    - transform
   - the parent div is relatively positioned
   - this allows the children divs to have absolute positioning so I can perfectly position them around the edges of the parent
   - it also allows for 1 of the children divs which holds the contents to be absolutely positioned spanning the whole parent
