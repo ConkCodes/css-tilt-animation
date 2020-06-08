@@ -1,0 +1,109 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.logo {
+    font-size: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,5,239,1) 0%, rgba(0,212,255,1) 100%);
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+    transition: 0.5s ease;
+}
+
+.hoverPoint {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+}
+
+.hoverPoint:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+.hoverPoint:nth-child(2) {
+    top: 0;
+    left: calc(100% / 3);
+}
+.hoverPoint:nth-child(3) {
+    top: 0;
+    right: 0;
+}
+.hoverPoint:nth-child(4) {
+    top: calc(100% / 3);
+    left: 0;
+}
+.hoverPoint:nth-child(5) {
+    top: calc(100% / 3);
+    right: 0;
+}
+.hoverPoint:nth-child(6) {
+    bottom: 0;
+    left: 0;
+}
+.hoverPoint:nth-child(7) {
+    bottom: 0;
+    left: calc(100% / 3);
+}
+.hoverPoint:nth-child(8) {
+    bottom: 0;
+    right: 0;
+}
+
+.hoverPoint:nth-child(1):hover ~ .logo {
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, .5);
+    transform-origin: right top;
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
+}
+.hoverPoint:nth-child(2):hover ~ .logo {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .5);
+    transform-origin: center top;
+    transform: perspective(1000px) rotateX(10deg);
+}
+.hoverPoint:nth-child(3):hover ~ .logo {
+    box-shadow: -15px 15px 50px rgba(0, 0, 0, .5);
+    transform-origin: left top;
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
+}
+.hoverPoint:nth-child(4):hover ~ .logo {
+    box-shadow: 15px 5px 50px rgba(0, 0, 0, .5);
+    transform-origin: left center;
+    transform: perspective(1000px) rotateY(-10deg);
+}
+.hoverPoint:nth-child(5):hover ~ .logo {
+    box-shadow: -15px 5px 50px rgba(0, 0, 0, .5);
+    transform-origin: right center;
+    transform: perspective(1000px) rotateY(10deg);
+}
+.hoverPoint:nth-child(6):hover ~ .logo {
+    box-shadow: 15px -15px 50px rgba(0, 0, 0, .5);
+    transform-origin: right bottom;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(-10deg) rotateZ(-2deg);
+}
+.hoverPoint:nth-child(7):hover ~ .logo {
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, .5);
+    transform-origin: center bottom;
+    transform: perspective(1000px) rotateX(-10deg);
+}
+.hoverPoint:nth-child(8):hover ~ .logo {
+    box-shadow: -15px -15px 50px rgba(0, 0, 0, .5);
+    transform-origin: left bottom;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
+}
